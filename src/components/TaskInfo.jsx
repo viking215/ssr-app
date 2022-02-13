@@ -5,8 +5,6 @@ import { ListItem, StyledList } from "@/styles";
 
 const TaskInfo = ({ task }) => {
 
-    console.log(task.tasks_by_pk)
-
     const { created_at, isDone, user_id, description, title, updated_at, task_user  } = task.tasks_by_pk
 
     const {avatar_url, name, lastName} = task_user

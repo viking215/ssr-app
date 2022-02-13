@@ -7,13 +7,6 @@ import defaultAvatar from "../../../public/defaultUser.png"
 import styled from "styled-components";
 
 const Users = ({data}) => {
-    // const { data, loading } = useQuery<GetAllUserData>(GET_ALL_USERS);
-
-    //  if (loading) return <Spinner />;
-
-    /*const {avatar_url, name, lastName} = data.users
-
-    console.log(data.users)*/
 
     const CustomImage = styled(Image)`
       border-radius: 100px;

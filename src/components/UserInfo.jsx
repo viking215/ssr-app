@@ -4,8 +4,6 @@ import styled from "styled-components";
 
 
 const UserInfo = ({user}) => {
-    /*const { name, lastName, avatar_url} = user;*/
-
     const {name, lastName, id, isManager, avatar_url, us_tasks} = user.users_by_pk
 
     if (!user) {
