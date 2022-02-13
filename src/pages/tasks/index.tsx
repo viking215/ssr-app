@@ -72,6 +72,7 @@ export const getServerSideProps = async () => {
     })
 
     const data = response?.data
+
     return addApolloState(apolloClient, {
         props: {data}
     })

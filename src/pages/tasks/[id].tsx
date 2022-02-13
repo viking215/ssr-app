@@ -1,6 +1,5 @@
-import UserInfo from "components/UserInfo"
 import {addApolloState, initializeApollo} from "lib/apolloClient";
-import GET_TASK_INFO from "../../../queries/getUserInfo.graphql"
+import GET_TASK_INFO from "../../../queries/getTaskInfo.graphql"
 import TaskInfo from "components/TaskInfo";
 
 
