@@ -1,6 +1,23 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+module.exports = {
+	webpack: (config, options) => {
+		config.module.rules.push({
+			test: /\.(graphql|gql)$/,
+			exclude: /node_modules/,
+			loader: "graphql-tag/loader",
+		});
 
-module.exports = nextConfig
+		return config;
+	},
+	async redirects() {
+		return [
+			{
+				source: "/",
+				destination: "/tasks",
+				permanent: true,
+			},
+		];
+	},
+	images: {
+		domains: ['encrypted-tbn0.gstatic.com'],
+	},
+};
