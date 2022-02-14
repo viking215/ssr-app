@@ -8,7 +8,6 @@ const Layout = ({children}) => {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
     `
 
     return <AppWrapper>

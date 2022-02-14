@@ -1,5 +1,4 @@
 import Heading from "components/Heading";
-import styled from "styled-components";
 import {CustomWrapper, CustomImage} from "@/styles";
 
 
@@ -11,12 +10,6 @@ const UserInfo = ({user}) => {
     }
 
     const count = us_tasks.length
-
-    const UserWrapper = styled.div`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    `
 
     return (
         <CustomWrapper>

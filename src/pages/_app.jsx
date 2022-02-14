@@ -1,9 +1,7 @@
 import "antd/dist/antd.css";
-import {AppProps} from "next/app";
 import {GlobalStyle, MyLayout, Wrapper} from "@/styles";
 import {useApollo} from "lib/apolloClient";
 import {ApolloProvider} from "@apollo/client";
-import MainHeader from "components/Header";
 import Layout from "components/Layout";
 
 const App = ({Component, pageProps}) => {
@@ -13,7 +11,6 @@ const App = ({Component, pageProps}) => {
         <ApolloProvider client={apolloClient}>
             <GlobalStyle/>
             <Wrapper>
-                {/* <MainHeader />*/}
                 <Layout>
                     <MyLayout>
                         <Component {...pageProps} />

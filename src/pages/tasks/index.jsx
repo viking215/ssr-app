@@ -1,4 +1,3 @@
-
 import {addApolloState, initializeApollo} from "lib/apolloClient";
 import GET_ALL_TASKS from "../../../queries/getAllTasks.graphql"
 import {CheckCircleTwoTone, ClockCircleTwoTone} from "@ant-design/icons";
@@ -6,10 +5,6 @@ import Link from "next/link";
 import {CustomCard, CustomImage, CustomWrapper} from "@/styles"
 
 const Tasks = ({data}) => {
-
-    console.log(data)
-
-
 
     return (
         <CustomWrapper>
@@ -55,7 +50,7 @@ export const getServerSideProps = async () => {
     })
 
     const data = response?.data
-console.log(data)
+
     return addApolloState(apolloClient, {
         props: {data}
     })
