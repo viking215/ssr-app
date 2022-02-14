@@ -4,6 +4,7 @@ import Link from "next/link"
 import defaultAvatar from "../../../public/defaultUser.png"
 import styled from "styled-components";
 import {CustomImage, CustomCard, CustomWrapper} from "@/styles"
+import Head from "next/head";
 
 const Users = ({data}) => {
 
@@ -14,6 +15,10 @@ const Users = ({data}) => {
     `
 
     return (
+        <>
+            <Head>
+                <title>Users</title>
+            </Head>
         <CustomWrapper>
             {data?.users.map(({id, name, lastName, avatar_url}) => (
                 <Link href={`users/${id}`} key={id}>
@@ -37,6 +42,7 @@ const Users = ({data}) => {
                 </Link>
             ))}
         </CustomWrapper>
+        </>
     );
 };
 

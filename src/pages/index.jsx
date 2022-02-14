@@ -1,5 +1,7 @@
 import Heading from "components/Heading";
 import Image from "next/image"
+import Head from "next/head";
+
 import styled from "styled-components"
 import beach1 from "../../public/pictures/Beach-1.jpg"
 import beach2 from "../../public/pictures/Beach-2.jpg"
@@ -63,6 +65,9 @@ const Home = () => {
 
     return (
         <>
+            <Head>
+            <title>Home</title>
+        </Head>
             <Heading title="Home Page" tag="h1"/>
             <Heading title="Pictures" tag="h2"/>
             <Wrapper>

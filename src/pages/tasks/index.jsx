@@ -3,10 +3,15 @@ import GET_ALL_TASKS from "../../../queries/getAllTasks.graphql"
 import {CheckCircleTwoTone, ClockCircleTwoTone} from "@ant-design/icons";
 import Link from "next/link";
 import {CustomCard, CustomImage, CustomWrapper} from "@/styles"
+import Head from "next/head";
 
 const Tasks = ({data}) => {
 
     return (
+        <>
+        <Head>
+            <title>Tasks</title>
+        </Head>
         <CustomWrapper>
             {
                 data?.tasks.map(({title, description, id, task_user, isDone}) => {
@@ -39,6 +44,7 @@ const Tasks = ({data}) => {
                 )})
             }
         </CustomWrapper>
+        </>
     )
 }
 

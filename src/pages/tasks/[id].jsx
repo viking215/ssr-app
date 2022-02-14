@@ -1,11 +1,15 @@
 import {addApolloState, initializeApollo} from "lib/apolloClient";
 import GET_TASK_INFO from "../../../queries/getTaskInfo.graphql"
 import TaskInfo from "components/TaskInfo";
+import Head from "next/head";
 
 
 const TaskPage = ({task}) => {
     return (
         <>
+            <Head>
+                <title>{task.tasks_by_pk.title}</title>
+            </Head>
             <TaskInfo task={task}/>
         </>
     )
