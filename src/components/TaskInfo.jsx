@@ -5,10 +5,9 @@ import { ListItem, StyledList } from "@/styles";
 
 const TaskInfo = ({ task }) => {
 
-    const { created_at, isDone, user_id, description, title, updated_at, task_user  } = task.tasks_by_pk
+    const { created_at, isDone, user_id, description, task_user  } = task.tasks_by_pk
 
     const {avatar_url, name, lastName} = task_user
-   // const {isDone, id, created_at, description} = task
 
     const isTaskDone = isDone ? (
         <div>
@@ -42,5 +41,4 @@ const TaskInfo = ({ task }) => {
     );
 };
 
-// @ts-ignore
 export default TaskInfo;

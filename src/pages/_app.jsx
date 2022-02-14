@@ -6,7 +6,7 @@ import {ApolloProvider} from "@apollo/client";
 import MainHeader from "components/Header";
 import Layout from "components/Layout";
 
-const App = ({Component, pageProps}: AppProps) => {
+const App = ({Component, pageProps}) => {
     const apolloClient = useApollo(pageProps);
 
     return (
