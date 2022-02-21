@@ -15,8 +15,8 @@ let apolloClient;
 
 const isServer = typeof window === "undefined";
 
-const URL = "https://gql-2.test.serafim.help/v1/graphql";
-const SECRET = "123-123-123-123-123";
+const URL = "https://gql-test.fscch.ru/v1/graphql";
+const SECRET = "pass-fscch-gql-test";
 
 const httpLink = createHttpLink({
 	uri: URL,
@@ -36,20 +36,7 @@ const createApolloClient = () => {
 	return new ApolloClient({
 		ssrMode: isServer,
 		link: authLink.concat(httpLink),
-		cache: new InMemoryCache({
-			typePolicies: {
-				Query: {
-					fields: {
-						tasks: {
-							keyArgs: false,
-							merge(existing = [], incoming) {
-								return [...existing, ...incoming];
-							},
-						},
-					},
-				},
-			},
-		}),
+		cache: new InMemoryCache(),
 	});
 };
 

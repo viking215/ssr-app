@@ -1,0 +1,7 @@
+query GET_ICONS {
+    icons {
+        code
+        id
+        data
+    }
+}

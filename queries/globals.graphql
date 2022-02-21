@@ -1,0 +1,6 @@
+query GLOBALS {
+    settings(where: {scope: {_eq: "front-globals"}}) {
+        data
+        localization
+    }
+}

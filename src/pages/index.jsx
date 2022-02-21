@@ -1,8 +1,8 @@
 import Heading from "components/Heading";
 import Image from "next/image"
 import Head from "next/head";
-
 import styled from "styled-components"
+
 import beach1 from "../../public/pictures/Beach-1.jpg"
 import beach2 from "../../public/pictures/Beach-2.jpg"
 import beach3 from "../../public/pictures/Beach-3.jpg"
@@ -45,13 +45,13 @@ import valley1 from "../../public/pictures/Valley-1.jpg"
 import valley2 from "../../public/pictures/Valley-2.jpg"
 
 const pictures = [beach1, beach2, beach3, beach4, beach5, beach6, beach7, beach8, beach9, cliffs1, cliffs2, cliffs3,
-    cliffs4, cliffs5, cliffs6, cliffs7, cliffs8, desert1, desert2, desert3, desert4, desert5, desert5, desert6, desert7,
-    desert8, dome1, dome2, lake1, lake2, lake3, lake4, lake6, lake7, lake8, peak1, peak2, tree1, tree2, valley1, valley2,
+	cliffs4, cliffs5, cliffs6, cliffs7, cliffs8, desert1, desert2, desert3, desert4, desert5, desert5, desert6, desert7,
+	desert8, dome1, dome2, lake1, lake2, lake3, lake4, lake6, lake7, lake8, peak1, peak2, tree1, tree2, valley1, valley2,
 ]
 
 const Home = () => {
 
-    const Wrapper = styled.div`
+	const Wrapper = styled.div`
       display: grid;
       grid-template-columns: repeat(1);
       grid-gap: 10px;
@@ -59,34 +59,34 @@ const Home = () => {
       justify-content: center;
     `
 
-    const ImageRound = styled(Image)`
+	const ImageRound = styled(Image)`
       border-radius: 10px;
     `
 
-    return (
-        <>
-            <Head>
-            <title>Home</title>
-        </Head>
-            <Heading title="Home Page" tag="h1"/>
-            <Heading title="Pictures" tag="h2"/>
-            <Wrapper>
-                {
-                    pictures.map((item, index) => (
-                            <ImageRound
-                                key={index}
-                                src={item}
-                                alt="photo"
-                                placeholder="blur"
-                                width="800"
-                                height="600"
-                            />
-                        )
-                    )
-                }
-            </Wrapper>
-        </>
-    )
+	return (
+		<>
+			<Head>
+				<title>Home</title>
+			</Head>
+			<Heading title="Home Page" tag="h1"/>
+			<Heading title="Pictures" tag="h2"/>
+			<Wrapper>
+				{
+					pictures.map((item, index) => (
+							<ImageRound
+								key={index}
+								src={item}
+								placeholder="blur"
+								alt="photo"
+								width="800"
+								height="600"
+							/>
+						)
+					)
+				}
+			</Wrapper>
+		</>
+	)
 }
 
 export default Home

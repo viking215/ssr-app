@@ -1,6 +1,8 @@
 import MainHeader from "components/Header";
-import Footer from "components/Footer";
 import styled from "styled-components";
+import dynamic from "next/dynamic"
+
+const Footer = dynamic(() => import('components/Footer'))
 
 const Layout = ({children}) => {
 
@@ -9,6 +11,8 @@ const Layout = ({children}) => {
       flex-direction: column;
       justify-content: space-between;
     `
+
+
 
     return <AppWrapper>
         <MainHeader />
